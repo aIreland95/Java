@@ -1,0 +1,98 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package demoturners;
+
+/**
+ *
+ * @author Aaron
+ */
+public class DemoTurners {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        
+        //Aaron Ireland
+        //April 26, 2018
+        //In Class Interface Exercise
+        
+        //three new objects for leaf, page, and pancake, exercise part a
+        Leaf mapleLeaf = new Leaf();
+        Page bookPage = new Page();
+        Pancake flapjack = new Pancake();
+        
+        //calls turn methods for each object
+        mapleLeaf.turn();
+        bookPage.turn();
+        flapjack.turn();
+        
+        //two new objects for tire and top, exercise part b
+        Tire bridgestone = new Tire();
+        Top kidstoy = new Top();
+        
+        //calls turn methods for each new object
+        bridgestone.turn();
+        kidstoy.turn();
+    } 
+}
+
+//interface that is implemeted by each class
+public interface Turner {
+    
+    //turn method that is used by all classes that implement Turner
+    public void turn();
+}
+
+//Leaf class that implements Turner
+public class Leaf implements Turner{
+    
+    //turn method required for implemtation
+    public void turn(){
+        
+        System.out.println("Changing colors");
+    }
+}
+
+//Page class that implements Turner
+public class Page implements Turner{
+    
+     //turn method required for implemtation
+    public void turn(){
+        
+        System.out.println("Going to the next page");
+    }
+}
+
+//Pancake class that implements Turner
+public class Pancake implements Turner{
+    
+     //turn method required for implemtation
+    public void turn(){
+        
+        System.out.println("Flipping");
+    }
+}
+
+//Tire class that implements Turner
+public class Tire implements Turner{
+    
+     //turn method required for implemtation
+    public void turn(){
+        
+        System.out.println("Spinning on the road");
+    }
+}
+
+//Top class that implements Turner
+public class Top implements Turner{
+    
+     //turn method required for implemtation
+    public void turn(){
+        
+        System.out.println("Spins until it stops");
+    }
+}
