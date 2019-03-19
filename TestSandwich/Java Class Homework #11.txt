@@ -1,0 +1,129 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package testsandwich;
+//import java.util.Scanner;
+/**
+ *
+ * @author Aaron
+ */
+public class TestSandwich {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        
+        //Aaron Ireland
+        //March 26, 2018
+        //TestSandwich.java - Java Programming
+        
+        //introductory system.out
+        System.out.println("Welcome to Vincent Van Dough's Sandwich Shop!\nCheck out our best-selling sandwiches:\n");
+        
+        //creates new sandwich object
+        Sandwich sandwich = new Sandwich();
+        
+        //calls set methods for first sandwich attributes
+        sandwich.setIngredient("Ham");
+        sandwich.setCheese("Swiss");
+        sandwich.setBread("White");
+        sandwich.setPrice(3.49);
+        
+        //print-out for the first sandwich and attributes
+        System.out.println("1. " + sandwich.getIngredient() + " and " 
+                + sandwich.getCheese() + " sandwich on " + 
+                sandwich.getBread() + " bread - $" + sandwich.getPrice());
+        
+        //calls set methods for second sandwich attributes
+        sandwich.setIngredient("Tuna");
+        sandwich.setBread("Rye");
+        sandwich.setPrice(4.99);
+        
+        //print-out for second sandwich and attributes
+        System.out.println("2. " + sandwich.getIngredient() + " sandwich on "
+                + sandwich.getBread() + " bread - $" + sandwich.getPrice());
+        
+        //calls set methods for third sandwich attributes
+        sandwich.setIngredient("Turkey");
+        sandwich.setCheese("Provologne");
+        sandwich.setBread("Whole Wheat");
+        sandwich.setPrice(3.99);
+        
+        //print-out for third sandwich and attributes
+        System.out.println("3. " + sandwich.getIngredient() + " and " 
+                + sandwich.getCheese() + " sandwich on " + 
+                sandwich.getBread() + " bread - $" + sandwich.getPrice());
+    }   
+}
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package testsandwich;
+
+/**
+ *
+ * @author Aaron
+ */
+//Sandwich class, contains attributes and get/set methods
+public class Sandwich {
+    
+    //sandwich attributes, each using their own get and set methods
+    private String mainIng;
+    private String cheese;
+    private String bread;
+    private double price;
+    
+    //sandwich constructor method
+    public Sandwich(){
+        mainIng = "";
+        cheese = "";
+        bread = "";
+        price = 0;
+    }
+    
+    //get method for main ingredient
+    public String getIngredient(){
+        return mainIng;
+    }
+    
+    //set method for main ingredient, using this for referencing
+    public void setIngredient(String mainIng){
+        this.mainIng = mainIng;
+    }
+    
+    //get method for cheese
+    public String getCheese(){
+        return cheese;
+    }
+    
+    //set method for cheese, using this for referencing
+    public void setCheese(String cheese){
+        this.cheese = cheese;
+    }
+    
+    //get method for bread type
+    public String getBread(){
+        return bread;
+    }
+    
+    //set method for the bread type, also using this
+    public void setBread(String bread){
+        this.bread = bread;
+    }
+    
+    //get method for sandwich price
+    public double getPrice(){
+        return price;
+    }
+    
+    //set method for price, also using this
+    public void setPrice(double price){
+        this.price = price;
+    }
+}
