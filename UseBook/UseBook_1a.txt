@@ -1,0 +1,96 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package usebook;
+
+/**
+ *
+ * @author Aaron
+ */
+public class UseBook {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        
+        //Aaron Ireland
+        //April 20, 2018
+        //Java - Advanced Inheritance
+        
+        //two new book objects, one fiction, one nonfiction
+        Fiction scifi = new Fiction("Of Mice and Men");
+        NonFiction history = new NonFiction("The Magic of Reality");
+        
+        //calls setPrice methods for each book
+        scifi.setPrice();
+        history.setPrice();
+        
+        //calls display method for each book
+        scifi.display();
+        history.display();
+    }
+}
+
+//abstract base class
+public abstract class Book {
+    
+    //book attributes inherited by children
+    protected String title;
+    protected double price;
+    
+    //constructor that sets the book's title
+    public Book(String t){
+        
+        title = t;
+    }
+    
+    //empty abstract method, must be used by all derived classes
+    public abstract void setPrice();
+}
+
+//derived class
+public class Fiction extends Book {
+    
+    //constructor for fiction, setting title
+    public Fiction(String t){
+        
+        super(t);
+    }
+    
+    //setPrice method for fiction books
+    public void setPrice(){
+        
+        price = 24.99;
+    }
+    
+    //display method
+    public void display(){
+        
+        System.out.println("Title: " + title + "\nPrice: " + price + "\n");
+    }
+}
+
+//derived class
+public class NonFiction extends Book {
+
+    //constructor for title of nonfiction book
+    public NonFiction(String t) {
+        
+        super(t);
+    }
+    
+    //setPrice method for nonfiction books
+    public void setPrice(){
+        
+        price = 37.99;
+    }
+    
+    //display method
+    public void display(){
+        
+        System.out.println("Title: " + title + "\nPrice: " + price);
+    }
+}
